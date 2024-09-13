@@ -1,20 +1,32 @@
 public class Multiples {
 
-    public static void main(String[] args) {
+    public static int main(int n, int a, int b) {
 
         int count = 0;
-        for (int i = 1; i < 1000; i++) {
+        for (int i = 1; i < n; i++) {
 
             // Find out if divisible by 3 or 5.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+            boolean divisibleBya = i % a == 0;
+            boolean divisibleByb = i % b == 0;
 
             // update count
-            if (divisibleBy3 || divisibleBy5) {
+            if (divisibleBya || divisibleByb) {
                 count++;
             }
 
         }
-        System.out.println(count);
+        return count;
     }
-}
+
+    public static void main(String[] args) {
+
+        int defaultN = 1000;
+        int defaultA = 3;
+        int defaultB = 5;
+
+        int result = main(defaultN, defaultA, defaultB);
+        System.out.println(result);
+    }
+
+    }
+
